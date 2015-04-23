@@ -9,6 +9,16 @@
     <div class="logo-container">
         <img src="images/logo.png">
     </div>
-    <div id="main-menu">
+    <div >
+    <ul class="collapsible"  data-collapsible="accordion" materalize-collapsible ng-controller="NavLinksCtrl">
+        <li ng-repeat="generator in generators">
+            <div class="waves-effect collapsible-header">{{generator.name}}</div>
+            <div class="collapsible-body">
+                <ul>
+                    <li ng-repeat="command in generator.commands" ><a class="waves-effect" href="#module">{{command.name}}</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
     </div>
 </ul>
